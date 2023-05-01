@@ -1,5 +1,5 @@
 // Normal Functions
-function add(num1 : number, num2: number): number{
+function add(num1 : number, num2: number = 10): number{
     return num1 + num2
 }
 
@@ -20,3 +20,17 @@ const person: {
         console.log(`My Balance is ${this.balance + newMoney}`)
     }
 }
+
+//spread operator
+const myFriends = ["Nothing", "Something", "New Thing"]
+const newFriends = ["New friends", "New Ahead"]
+
+myFriends.push(...newFriends)
+console.log(myFriends);
+
+// rest parameter
+const greatText = (...friend : string[]) : void => {
+    friend.forEach((fd) => console.log(`Hello,\n ${fd}`)) ;
+}
+
+greatText("Monirul Islam", "Sadia", "Partner", "John Doe", "Gates")
